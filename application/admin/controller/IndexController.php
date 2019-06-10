@@ -9,6 +9,12 @@
 class IndexController extends BaseController
 {
 
+
+    public function indexAction(){
+
+        echo '感谢使用酷框架！';
+    }
+
     /**
      * 用户登录获取菜单
      */
