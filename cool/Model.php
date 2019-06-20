@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 金帅
+ * User: Jincool
  * Date: 2018/8/24
  * Time: 10:55
  */
@@ -25,7 +25,7 @@ class Model
     public static function conn($jb = 'localhost')
     {
         if (self::$link === null) {
-            $cfg = require './application/config/database.php';
+            $cfg = require './config/database.php';
             self::$link = new Mysqli($cfg[$jb]['host'], $cfg[$jb]['user'], $cfg[$jb]['pwd'], $cfg[$jb]['db']);
 
             self::query("set names 'utf8'");//设置字符集
@@ -99,7 +99,7 @@ class Model
         } else if ($act == 'update') {
             $sql = 'update ' . $table . ' set ';
             foreach ($data as $k => $v) {
-                $sql .= $k . '=' . "'$v',";
+                $sql .= '`'.$k . '`=' . "'$v',";
             }
             $sql = rtrim($sql, ',');
             $sql .= ' where 1 and ' . $where;
