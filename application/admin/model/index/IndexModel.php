@@ -31,9 +31,9 @@ class IndexModel extends BaseModel
             $menuSubTable=self::$menuSubTable;
             $roleId=$user['rid'];//获取用户角色ID
             $sql="SELECT rm.menu_id,m.menu_name,ms.sub_name ,ms.component FROM $roleMenuTable rm
-              JOIN $menuTable m ON rm.menu_id = m.id and m.is_delete = 0 
-              JOIN $menuSubTable ms ON ms.id = rm.sub_id and ms.is_delete = 0
-              WHERE role_id = '$roleId' ORDER BY m.`index` ,ms.`index`";
+              JOIN $menuTable m ON rm.menu_id = m.id AND m.is_delete = 0 
+              JOIN $menuSubTable ms ON ms.id = rm.sub_id AND ms.is_delete = 0
+              WHERE rm.is_delete = 0 AND role_id = '$roleId' ORDER BY m.`index` ,ms.`index`";
             $navData=self::getAll($sql);//获取权限菜单
             $children =[];//嵌套路由数组
             foreach ($navData as $k=>$v){
