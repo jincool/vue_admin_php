@@ -29,5 +29,10 @@ class IndexController extends BaseController
 
    }
 
+   public function testAction(){
+       $data= IndexModel::departmentArr(12);
+       echo json_encode($data);
+   }
+
 
 }

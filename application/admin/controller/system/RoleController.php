@@ -13,7 +13,12 @@ class RoleController
      * 获取所有角色
      */
     public function getRoleAction(){
-        $data = RoleModel::getRole();
+        $level = "1=1";
+        if (!empty($_POST['level'])){
+            $getLevel = $_POST['level'];
+            $level ="role_level>'$getLevel'";
+        }
+        $data = RoleModel::getRole($level);
         echo json_encode($data);
     }
     /**
@@ -83,6 +88,20 @@ class RoleController
             $id = $_POST['id'];
             $type = $_POST['type'];
             $data = RoleModel::deleteRole($type,$id);
+            echo json_encode($data);
+        }
+    }
+
+    /**
+     *权限角色等级排序
+     * @param $dataRole //角色数组
+     * @return array
+     */
+
+    public function refreshSortAction(){
+        if (!empty($_POST['dataRole'])){
+            $dataRole = $_POST['dataRole'];
+            $data = RoleModel::refreshSort($dataRole);
             echo json_encode($data);
         }
     }

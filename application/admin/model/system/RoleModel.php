@@ -15,12 +15,14 @@ class RoleModel extends BaseModel
 
 
     /**
-     * 获取所有角色
+     * 获取角色
+     * @param $level //角色等级
      * @return arr
+     *created by Jincool
      */
-    public static function getRole(){
+    public static function getRole($level){
         $roleTable = self::$roleTable;
-        $sql = "SELECT * FROM $roleTable WHERE is_delete = 0 ";
+        $sql = "SELECT * FROM $roleTable WHERE is_delete = 0 AND {$level} ORDER BY `role_level`";
         return self::getAll($sql);
     }
     /**
@@ -99,6 +101,24 @@ class RoleModel extends BaseModel
         }else{
             return ['status'=>0];//失败
         }
+    }
+
+    /**
+     *权限角色等级排序
+     * @param $dataRole //角色数组
+     * @return array
+     */
+    public static function refreshSort($dataRole){
+        $tableName = self::$roleTable;
+        foreach ($dataRole as $k =>$v){
+            $res = self::exec($tableName,['role_level'=>$k],'update','id='.$v['id']);
+        }
+        if ($res){
+            return ['status'=>1];//成功
+        }else{
+            return ['status'=>0];//失败
+        }
+
     }
 
 }

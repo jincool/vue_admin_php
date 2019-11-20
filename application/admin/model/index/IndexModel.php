@@ -40,6 +40,8 @@ class IndexModel extends BaseModel
                 $children[]=['path'=>$v['component'],
                     'name'=>$v['component'], 'component'=>$v['component']];
             }
+            $children[]=['path'=>'outside-iframe',
+                'name'=>'outside-iframe', 'component'=>'outside-iframe'];//添加外部链接组件
             $routerData = [[
                 "path"=> "/",
                 "name"=> "main",
