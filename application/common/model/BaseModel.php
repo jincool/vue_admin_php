@@ -27,14 +27,11 @@ class BaseModel extends Model
             $password = $user['password'];//用户密码
             $sql = "SELECT u.*, ur.role_id,r.role_level FROM $userTable u JOIN $userRoleTable ur ON ur.user_id = u.id
                     JOIN $roleTable r ON r.id = ur.role_id WHERE `username` = '$username' AND `password` = '$password'
-                    AND is_deleted = 0";
+                    AND u.is_delete = 0";
             $res = self::getRow($sql);
         if (!empty($res)) {
             $did = $res['department_id'];//所属部门id
-            $sqlDepartment = "SELECT T2.id, T2.name FROM ( SELECT @r AS _id, (SELECT @r := pid FROM $departmentTable 
-                    WHERE id = _id) AS pid,  @l := @l + 1 AS lvl FROM (SELECT @r := $did, @l := 0) vars,
-                     $departmentTable h WHERE @r <> 0) T1 JOIN $departmentTable T2 ON T1._id = T2.id ORDER BY T1.lvl DESC";
-            $department = self::getAll($sqlDepartment);
+            $department = self::department($did);
             return [
                 "name" => $res['name'],//用户姓名
                 "id" => $res['id'],//用户id
@@ -65,6 +62,23 @@ class BaseModel extends Model
             return ['pageSize'=>$pageSize,'pageStart'=>$pageStart];
         }
     }
+
+    /**
+     * 获取所属部门
+     * @param $deptId
+     * @return array
+     *created by Jincool
+     */
+    protected static function department($deptId){
+        $departmentTable = self::$departmentTable;//部门表
+        $sqlDepartment = "SELECT T2.id, T2.name FROM ( SELECT @r AS _id, (SELECT @r := pid FROM $departmentTable 
+                    WHERE id = _id) AS pid,  @l := @l + 1 AS lvl FROM (SELECT @r := $deptId, @l := 0) vars,
+                     $departmentTable h WHERE @r <> 0) T1 JOIN $departmentTable T2 ON T1._id = T2.id ORDER BY T1.lvl DESC";
+        $department = self::getAll($sqlDepartment);
+        return $department;
+    }
+
+
 
 
 }

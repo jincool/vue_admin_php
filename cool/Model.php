@@ -148,6 +148,30 @@ class Model
         return self::conn()->affected_rows;
     }
 
+    /**关闭自动提交，开始事物处理
+     * @return mixed
+     *created by Jincool
+     */
+    public static function autocommit(){
+        return self::conn()->autocommit(false);
+    }
+
+    /**
+     * 事物提交
+     * @return mixed
+     *created by Jincool
+     */
+    public static function commit(){
+        return self::conn()->commit();
+    }
+
+    /**事物回滚
+     * @return mixed
+     *created by Jincool
+     */
+    public static function rollback(){
+        return self::conn()->rollback();
+    }
     /**
      * 关闭数据库连接
      * @return bool 是否关闭
