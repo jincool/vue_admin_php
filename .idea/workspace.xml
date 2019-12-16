@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfc40608-c7ae-4cdc-aa07-45e846601da5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/department/DeptUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/department/DeptUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/model/department/DeptUserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/model/department/DeptUserModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/common/model/BaseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/common/model/BaseModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cool/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/cool/Model.php" afterDir="false" />
-    </list>
+    <list default="true" id="dfc40608-c7ae-4cdc-aa07-45e846601da5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +15,8 @@
       <file leaf-file-name="IndexModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/admin/model/index/IndexModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+            <state relative-caret-position="316">
+              <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -30,7 +24,7 @@
       <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/common/model/BaseModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12">
+            <state relative-caret-position="408">
               <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
             </state>
           </provider>
@@ -85,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/application/admin/controller/system/RoleController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -153,8 +147,8 @@
     </servers>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="45" />
+    <option name="x" value="116" />
+    <option name="y" value="66" />
     <option name="width" value="1446" />
     <option name="height" value="775" />
   </component>
@@ -387,29 +381,29 @@
       <workItem from="1574649414588" duration="88000" />
       <workItem from="1575253021298" duration="931000" />
       <workItem from="1575257366609" duration="1212000" />
+      <workItem from="1576201726200" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171428000" />
+    <option name="totallyTimeSpent" value="171450000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="45" width="1446" height="775" extended-state="0" />
-    <editor active="true" />
+    <frame x="116" y="66" width="1446" height="775" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25829726" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32967034" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3987441" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -657,7 +651,7 @@
     <entry file="file://$PROJECT_DIR$/application/admin/controller/system/RoleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -722,7 +716,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/common/model/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
+        <state relative-caret-position="408">
           <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
         </state>
       </provider>
@@ -736,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/model/index/IndexModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+        <state relative-caret-position="316">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
         </state>
       </provider>
     </entry>
