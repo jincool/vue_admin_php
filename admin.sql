@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2019-12-16 14:56:38
+Date: 2020-01-05 13:49:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -115,10 +115,10 @@ CREATE TABLE `menu` (
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` VALUES ('4', '系统设置', '6', '0');
-INSERT INTO `menu` VALUES ('9', '部门设置', '5', '0');
-INSERT INTO `menu` VALUES ('10', '百度搜索', '4', '0');
-INSERT INTO `menu` VALUES ('11', '个人主页', null, '0');
+INSERT INTO `menu` VALUES ('4', '系统设置', '3', '0');
+INSERT INTO `menu` VALUES ('9', '部门设置', '2', '0');
+INSERT INTO `menu` VALUES ('10', '外部链接', '1', '0');
+INSERT INTO `menu` VALUES ('11', '个人主页', '0', '0');
 
 -- ----------------------------
 -- Table structure for menu_sub
@@ -128,22 +128,22 @@ CREATE TABLE `menu_sub` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `menu_id` int(11) NOT NULL,
   `sub_name` varchar(25) NOT NULL COMMENT '子菜单名字',
-  `component` varchar(25) NOT NULL COMMENT '组件名字',
+  `component` varchar(55) NOT NULL COMMENT '组件名字',
   `index` int(11) DEFAULT NULL COMMENT '排序',
   `is_delete` int(11) NOT NULL DEFAULT '0' COMMENT '软删除 默认为0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=118 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=121 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of menu_sub
 -- ----------------------------
-INSERT INTO `menu_sub` VALUES ('6', '4', '菜单设置', 'system-menu', null, '0');
-INSERT INTO `menu_sub` VALUES ('117', '11', '测试', '132', null, '1');
-INSERT INTO `menu_sub` VALUES ('113', '9', '部门管理', 'department-add', null, '0');
-INSERT INTO `menu_sub` VALUES ('114', '10', '百度搜索', 'https://www.baidu.com', '0', '0');
-INSERT INTO `menu_sub` VALUES ('112', '4', '角色设置', 'system-role', null, '0');
-INSERT INTO `menu_sub` VALUES ('115', '9', '用户管理', 'department-user', null, '0');
-INSERT INTO `menu_sub` VALUES ('116', '11', '主页', 'index-info', null, '0');
+INSERT INTO `menu_sub` VALUES ('120', '10', 'elementUI', '/https://element.eleme.cn', null, '0');
+INSERT INTO `menu_sub` VALUES ('6', '4', '菜单设置', 'system/set-menu', null, '0');
+INSERT INTO `menu_sub` VALUES ('113', '9', '部门管理', 'department/department', null, '0');
+INSERT INTO `menu_sub` VALUES ('114', '10', '百度搜索', '/https://www.baidu.com', '0', '0');
+INSERT INTO `menu_sub` VALUES ('112', '4', '角色设置', 'system/set-role', null, '0');
+INSERT INTO `menu_sub` VALUES ('115', '9', '用户管理', 'department/user', null, '0');
+INSERT INTO `menu_sub` VALUES ('116', '11', '主页', 'index/index', null, '0');
 
 -- ----------------------------
 -- Table structure for role
@@ -178,12 +178,12 @@ CREATE TABLE `role_menu` (
   `sub_id` int(11) NOT NULL COMMENT '子菜单id',
   `is_delete` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COMMENT='角色菜单表';
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COMMENT='角色菜单表';
 
 -- ----------------------------
 -- Records of role_menu
 -- ----------------------------
-INSERT INTO `role_menu` VALUES ('29', '1', '11', '117', '0');
+INSERT INTO `role_menu` VALUES ('29', '1', '11', '117', '1');
 INSERT INTO `role_menu` VALUES ('30', '2', '11', '116', '0');
 INSERT INTO `role_menu` VALUES ('31', '3', '11', '116', '0');
 INSERT INTO `role_menu` VALUES ('32', '8', '11', '116', '0');
@@ -192,6 +192,7 @@ INSERT INTO `role_menu` VALUES ('6', '1', '4', '6', '0');
 INSERT INTO `role_menu` VALUES ('7', '1', '4', '112', '0');
 INSERT INTO `role_menu` VALUES ('12', '7', '4', '112', '0');
 INSERT INTO `role_menu` VALUES ('34', '10', '11', '116', '0');
+INSERT INTO `role_menu` VALUES ('37', '1', '10', '120', '0');
 INSERT INTO `role_menu` VALUES ('17', '1', '9', '113', '0');
 INSERT INTO `role_menu` VALUES ('18', '1', '10', '114', '0');
 INSERT INTO `role_menu` VALUES ('19', '1', '9', '115', '0');
