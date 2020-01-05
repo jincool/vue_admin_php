@@ -18,7 +18,7 @@ class IndexController extends BaseController
     /**
      * 用户登录获取菜单
      */
-   public function menuAction(){
+   public function loginAction(){
        if (!empty($_POST['username'])){
            $user=['username'=>$_POST['username'],
                   'password'=>$_POST['password']
@@ -29,8 +29,16 @@ class IndexController extends BaseController
 
    }
 
-   public function testAction(){
-       $data= IndexModel::departmentArr(12);
+
+    /**
+     * 根据角色获取菜单
+     *created by Jincool
+     */
+   public function menuAction(){
+       if (!empty($_POST['rid'])){
+           $rid = $_POST['rid'];
+           $data = IndexModel::getMenu($rid);
+       }
        echo json_encode($data);
    }
 
